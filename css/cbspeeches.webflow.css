@@ -325,7 +325,7 @@ figcaption {
 .heading-jumbo {
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 30px;
+  font-size: 34px;
   line-height: 150%;
   font-weight: 500;
   text-align: left;
@@ -1822,7 +1822,7 @@ figcaption {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 90vh;
+  height: 100%;
   max-height: 780px;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -2294,6 +2294,9 @@ figcaption {
 .section-4 {
   width: 100%;
   height: 100%;
+  padding-right: 80px;
+  padding-left: 80px;
+  border-radius: 0px;
 }
 
 .heading-11 {
@@ -2301,6 +2304,99 @@ figcaption {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
+}
+
+.tabs-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 50% 50%;
+  object-position: 50% 50%;
+}
+
+.tabs {
+  width: 100%;
+  margin-right: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: hsla(0, 0%, 76.7%, 0.22);
+  border-radius: 6px;
+  box-shadow: 1px 1px 6px 1px rgba(61, 61, 61, 0.48);
+}
+
+.tab-link-tab-1 {
+  width: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: hsla(0, 0%, 41.3%, 0.47);
+  border-radius: 8px 8px 0px 0px;
+}
+
+.tab-link-tab-1.tabstyle {
+  border-style: none;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  opacity: 0.5;
+}
+
+.tab-link-tab-1.tabstyle.w--current {
+  border-style: none;
+  background-color: #fff;
+}
+
+.tab-link-tab-2 {
+  width: 100%;
+  border-radius: 0px;
+  opacity: 0.5;
+}
+
+.tab-link-tab-2.w--current {
+  background-color: #fff;
+  font-weight: 600;
+}
+
+.tab-link-tab-3 {
+  width: 100%;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.tab-link-tab-3.w--current {
+  border-radius: 0px;
+  background-color: #fff;
+}
+
+.text-block-8 {
+  color: #383838;
+  text-align: center;
+}
+
+.text-block-9 {
+  color: #141414;
+  text-align: center;
+}
+
+.text-block-10 {
+  text-align: center;
+}
+
+.heading-12 {
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 @media screen and (max-width: 991px) {

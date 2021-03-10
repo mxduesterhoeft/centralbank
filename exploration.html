@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Sat Feb 27 2021 12:22:01 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Tue Mar 09 2021 22:45:02 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6022e4e525abed529820814c" data-wf-site="600ec03352cf05a3da53145c">
 <head>
   <meta charset="utf-8">
@@ -23,7 +23,7 @@
 <body>
   <div data-collapse="medium" data-animation="default" data-duration="400" data-doc-height="1" data-no-scroll="1" role="banner" class="navigation w-nav">
     <div class="menu-button w-nav-button"><img src="images/menu-icon_1menu-icon.png" width="22" alt="" class="menu-icon"></div>
-    <a href="index.html" class="logo-link w-nav-brand"><img src="images/cbaLogoFinal.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 16.359375px, (max-width: 991px) 3vw, 8vw" srcset="images/cbaLogoFinal.png 500w, images/cbaLogoFinal.png 800w, images/cbaLogoFinal.png 1080w, images/cbaLogoFinal.png 1560w" alt="">
+    <a href="index.html" class="logo-link w-nav-brand"><img src="images/cbaLogoFinal.png" loading="lazy" sizes="(max-width: 767px) 7vw, 8vw" srcset="images/cbaLogoFinal-p-500.png 500w, images/cbaLogoFinal-p-800.png 800w, images/cbaLogoFinal-p-1080.png 1080w, images/cbaLogoFinal.png 1560w" alt="">
       <div class="text-block-6">CENTRAL BANK SPEECHES</div>
     </a>
     <div class="navigation-wrap">
@@ -47,19 +47,43 @@
   <header id="hero-overlay" class="hero-overlay">
     <div class="centered-container-2 w-container">
       <h1>Data exploration</h1>
-      <p>Blabla See here and explore our data set </p>
+      <p>Explore our data set</p>
       <div>
-        <a href="#" class="w-button">Button text</a>
+        <a href="#" class="button cc-jumbo-button cc-jumbo-white w-button">Start Exploring</a>
       </div>
     </div>
   </header>
-  <div class="section-4"></div>
+  <div class="section-4">
+    <h1>Select your filter</h1>
+    <div data-duration-in="300" data-duration-out="100" class="tabs w-tabs">
+      <div class="tabs-menu w-tab-menu">
+        <a data-w-tab="Tab 2" class="tab-link-tab-2 w-inline-block w-tab-link w--current">
+          <div class="text-block-9">Speech Count</div>
+        </a>
+        <a data-w-tab="Tab 4" class="tab-link-tab-2 w-inline-block w-tab-link">
+          <div class="text-block-9">Central Bank Activity</div>
+        </a>
+        <a data-w-tab="Tab 5" class="tab-link-tab-2 w-inline-block w-tab-link">
+          <div class="text-block-9">Topic Proportions</div>
+        </a>
+      </div>
+      <div class="w-tab-content">
+        <div data-w-tab="Tab 2" class="w-tab-pane w--tab-active">
+          <iframe src="http://35.246.191.18:5601/app/dashboards#/view/f2805130-8129-11eb-9e9f-7dc520b36043?embed=true&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'1990-03-10T17:17:49.757Z',to:now))&_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),panels:!((embeddableConfig:(enhancements:()),gridData:(h:8,i:'934afe68-bccb-415f-bc12-98e75a70c3f5',w:48,x:0,y:0),id:'23e6ad40-81c6-11eb-9e9f-7dc520b36043',panelIndex:'934afe68-bccb-415f-bc12-98e75a70c3f5',type:visualization,version:'7.11.0'),(embeddableConfig:(enhancements:()),gridData:(h:22,i:ade92f52-bf24-48bb-9f34-c5a336f45dcb,w:48,x:0,y:8),id:e24b4cc0-8129-11eb-9e9f-7dc520b36043,panelIndex:ade92f52-bf24-48bb-9f34-c5a336f45dcb,type:lens,version:'7.11.0')),query:(language:kuery,query:''),tags:!(),timeRestore:!f,title:ZeitreiheGesamt,viewMode:view)" height="800" width="100%"></iframe>
+        </div>
+        <div data-w-tab="Tab 4" class="w-tab-pane">
+          <iframe src="http://35.246.191.18:5601/app/dashboards#/view/c59be570-812a-11eb-9e9f-7dc520b36043?embed=true&_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A0)%2Ctime%3A(from%3A'1990-03-10T17%3A19%3A13.127Z'%2Cto%3Anow))&show-query-input=true&hide-filter-bar=true" height="800" width="100%"></iframe>
+        </div>
+        <div data-w-tab="Tab 5" class="w-tab-pane">
+          <iframe src="http://35.246.191.18:5601/app/dashboards#/view/1dec1f50-812c-11eb-9e9f-7dc520b36043?embed=true&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'2000-02-19T15:42:59.217Z',to:'2007-05-29T05:47:35.316Z'))&_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),panels:!((embeddableConfig:(),gridData:(h:21,i:'1c651fb2-b871-42c2-95d9-692939dcdec2',w:10,x:0,y:6),id:'0e19c1c0-8183-11eb-9e9f-7dc520b36043',panelIndex:'1c651fb2-b871-42c2-95d9-692939dcdec2',type:visualization,version:'7.11.0'),(embeddableConfig:(enhancements:()),gridData:(h:21,i:b694d9b6-00af-4f24-af9e-61a89f2dfff8,w:38,x:10,y:6),id:'02b17320-812c-11eb-9e9f-7dc520b36043',panelIndex:b694d9b6-00af-4f24-af9e-61a89f2dfff8,type:lens,version:'7.11.0'),(embeddableConfig:(),gridData:(h:6,i:'9256d875-3fc5-434d-848e-b4fb4f24c42c',w:48,x:0,y:0),id:'59d32200-8183-11eb-9e9f-7dc520b36043',panelIndex:'9256d875-3fc5-434d-848e-b4fb4f24c42c',type:visualization,version:'7.11.0')),query:(language:kuery,query:''),tags:!(),timeRestore:!f,title:topicproportion,viewMode:view)&hide-filter-bar=true" height="800" width="100%"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="section">
     <div class="container">
       <div class="footer-wrap">
-        <a href="https://webflow.com/" target="_blank" class="webflow-link w-inline-block"><img src="images/webflow-w-small2x_1webflow-w-small2x.png" width="15" alt="" class="webflow-logo-tiny">
-          <div class="paragraph-tiny">Powered by Webflow</div>
-        </a>
+        <a href="https://webflow.com/" target="_blank" class="webflow-link w-inline-block"></a>
       </div>
     </div>
   </div>
