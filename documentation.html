@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Tue Mar 09 2021 22:45:02 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Fri Mar 19 2021 11:27:23 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6022e50125abed0850208165" data-wf-site="600ec03352cf05a3da53145c">
 <head>
   <meta charset="utf-8">
@@ -44,43 +44,35 @@
       </div>
     </div>
   </div>
-  <header id="hero-overlay" class="hero-overlay">
-    <div class="centered-container-2 w-container">
-      <h1>Hero overlay</h1>
-      <p>This <strong>hero</strong> is built with a <strong>flex</strong> layout, aligned and justified so that the content will always be centered horizontally and vertically. To change this section’s background, select the “Hero Overlay” then scroll to the <strong>background</strong> section of the Style panel and replace the image. You can also adjust the <strong>opacity</strong> of the overlay’s black background for better contrast.</p>
-      <div>
-        <a href="#" class="w-button">Button text</a>
-      </div>
-    </div>
-  </header>
+  <div class="section-6"></div>
   <main id="main-content" class="main-content">
     <div class="w-container">
       <div class="w-richtext">
-        <h2>Main content</h2>
-        <p>The rich text element allows you to create and format headings, paragraphs, blockquotes, images, and video all in one place, instead of having to add and format them individually. Just double-click and start writing.</p>
+        <h2>About the Data</h2>
+        <p>The Observer contains {$Link_to_#_speeches} speeches of {$Link_to_#_central_banks} central banks.<br>The dataset includes several metadata, such as the name of the central bank, the time, the speaker or geographic location where it took place.<br>The raw speeches are obtained from central banks websites and other global repositories as FRASER or the Bank of International Settlements (BIS) website.<br>Please visit the Data page ({$Link_to_#_Data}) for more information on downloading speeches.</p>
         <p>‍</p>
-        <h3>Static and dynamic content editing</h3>
-        <p>A rich text element can be used with static or dynamic content. For static content, just drop the element into any page and begin editing. For dynamic content, add a rich text field to any collection and then connect a rich text element to that field in the settings panel. Voila!</p>
-        <p>To style the headings, paragraphs, blockquotes, figures, images, and captions inside your rich text element, first:</p>
+        <h3>New speeches/Compilation of speeches</h3>
+        <p><br>New speeches are added on a monthly basis. <br>Since there is no all encompassing repository, new speeches are obtained by comparing the new speeches of the BIS repository and the respective central bank websites.<br>After adding all new speeches and removing duplicates, the meta data is extracted by individual strategies depending on the source and <br>speech format. <br><br>For natural language processing (NLP), a pipeline of preprocessing methods is conducted. <br>It includes lemmatization (following the ... method), a transformation to lower case, removing of stoppwords, punctuation and numbers.<br><br>For information extraction, we conduct several measurements:<br><br></p>
         <ol start="1" role="list">
-          <li>Give the rich text element a class</li>
-          <li>Select the element within the rich text that you want to style — a blockquote, for example</li>
-          <li>Click the + sign below the <strong>selector</strong> field to “Nest selector inside of” your rich text element’s class</li>
+          <li>Sentiment indicators are computed based on different dictionaries and weighting methods. Those include Loughran, McDonald (2012) and Blix-Grimaldi (...).</li>
+          <li>Textual complexity measures are extracted on the basis of () and (). </li>
+          <li>We conduct several topic models following the classic LDA method (Blei et al 2003). The exact parameter settings can be found here. We don&#x27;t predict topics on new documents, but estimating the whole corpus again.<br><br>Finally, all new speeches are indexed via ElasticSearch and deployed on Kibana.</li>
         </ol>
         <p>‍</p>
-        <h4>How to customize formatting for each rich text element</h4>
-        <figure style="padding-bottom:56.206088992974244%" class="w-richtext-align-fullwidth w-richtext-figure-type-video">
-          <div><iframe allowfullscreen="true" frameborder="0" scrolling="no" src="https://www.youtube.com/embed/97v2cSE1rrU"></iframe></div>
-        </figure>
-        <p>‍</p>
-        <h5>And this would be an H5</h5>
+        <h3>Data</h3>
         <ul role="list">
           <li>A rich text element can be used with static or dynamic content. For static content, just drop it into any page and begin editing.</li>
-          <li>For dynamic content, add a rich text field to any collection and then connect a rich text element to that field in the settings panel.</li>
+          <li>Coverage:</li>
+          <li> Year Range: 1990 - today ($Link_Date_of_last_Speech)</li>
+          <li>We provide the raw speech in its original format, which can be either html (text) or pdf. The pdf format contains mainly machine readable text. Other cases include <br>pictures of old documents, which is not directly accessible. We recommend optical character recognition by software or simply by using adobe readers text recognition <br>option.</li>
         </ul>
-        <p>The rich text element allows you to create and format headings, paragraphs, blockquotes, images, and video all in one place instead of having to add and format them individually. Just double-click and start writing.</p>
+        <h3>Limitations and missing data</h3>
+        <ul role="list">
+          <li> Some swedish speeches (Norwegian) are only available on youtube. Those are not included in the corpus.</li>
+          <li>Some of the speeches are only available in their native language. If no official translation could be found, we<br> translated them via (&quot;google translate&quot; and &quot;&quot;). Automated translation is far from being perfect and limits usuability of those documents regarding certain text mining methods.<br> For a discussion of translation services in the use of social science, see here (Roberts 2015?).</li>
+          <li>No bibliographic search is available yet. We excluded the bibliography for textual analysis, but the raw documents still contain those.</li>
+        </ul>
         <p>‍</p>
-        <blockquote><em>Headings, paragraphs, blockquotes, figures, images, and figure captions can all be styled after a class is added to the rich text element using the “When inside of” nested selector system.</em></blockquote>
       </div>
     </div>
   </main>

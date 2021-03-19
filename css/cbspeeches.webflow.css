@@ -523,6 +523,11 @@ figcaption {
   background-color: transparent;
 }
 
+.navigation.navexplore {
+  position: static;
+  background-color: #161616;
+}
+
 .navigation-item {
   position: relative;
   overflow: hidden;
@@ -1823,9 +1828,15 @@ figcaption {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  max-height: 780px;
+  max-height: none;
+  min-height: 600px;
   padding-top: 100px;
   padding-bottom: 100px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1838,6 +1849,8 @@ figcaption {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/mika-baumeister-Tz1k07Jl2no-unsplash.jpg');
   background-position: 0px 0px, 50% 50%;
   color: #fff;
+  -o-object-fit: fill;
+  object-fit: fill;
 }
 
 .centered-container-2 {
@@ -2291,7 +2304,7 @@ figcaption {
   opacity: 0.85;
 }
 
-.section-4 {
+.exploretabs {
   width: 100%;
   height: 100%;
   padding-right: 80px;
@@ -2397,6 +2410,93 @@ figcaption {
   margin-left: 20px;
   padding-right: 20px;
   padding-left: 20px;
+}
+
+.tabs-content {
+  min-height: 400px;
+}
+
+.section-4 {
+  min-height: 120px;
+  background-color: #131313;
+  color: #181818;
+}
+
+.sticky-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.nav-grid {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-flow: column;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  -ms-grid-columns: 1fr -webkit-max-content -webkit-max-content -webkit-max-content;
+  -ms-grid-columns: 1fr max-content max-content max-content;
+  grid-template-columns: 1fr -webkit-max-content -webkit-max-content -webkit-max-content;
+  grid-template-columns: 1fr max-content max-content max-content;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+
+.nav-logo-link {
+  display: block;
+  height: 60px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding: 0px;
+}
+
+.nav-logo {
+  width: auto;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: 0% 50%;
+  object-position: 0% 50%;
+}
+
+.nav-link {
+  display: block;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding: 10px 0px;
+  color: #444;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.section-5 {
+  min-height: 120px;
+  background-color: #131313;
+  color: #181818;
+}
+
+.section-6 {
+  min-height: 120px;
+  background-color: #181818;
 }
 
 @media screen and (max-width: 991px) {
@@ -2888,6 +2988,14 @@ figcaption {
     -ms-flex-order: -1;
     order: -1;
   }
+
+  .sticky-nav {
+    position: relative;
+  }
+
+  .nav-grid {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -3006,6 +3114,30 @@ figcaption {
     padding-bottom: 20px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+  }
+
+  .sticky-nav {
+    padding: 0px;
+  }
+
+  .nav-grid {
+    grid-auto-flow: row;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 100px;
+    grid-template-rows: 100px;
+  }
+
+  .nav-logo-link {
+    border-top: 1px solid #c4c4c4;
+  }
+
+  .nav-link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #c4c4c4;
   }
 }
 
