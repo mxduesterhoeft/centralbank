@@ -49,28 +49,47 @@
     <div class="w-container">
       <div class="w-richtext">
         <h2>About the Data</h2>
-        <p>This is a test. A second test. The Observer contains {$Link_to_#_speeches} speeches of {$Link_to_#_central_banks} central banks.<br>The dataset includes several metadata, such as the name of the central bank, the time, the speaker or geographic location where it took place.<br>The raw speeches are obtained from central banks websites and other global repositories as FRASER or the Bank of International Settlements (BIS) website.<br>Please visit the Data page ({$Link_to_#_Data}) for more information on downloading speeches.</p>
-        <p>‍</p>
+        <p>  The Observer contains {$Link_to_#_speeches} speeches of {$Link_to_#_central_banks} central banks.
+          The dataset includes several metadata, such as the name of the central bank, the time, the speaker 
+          or geographic location where it took place.The raw speeches are obtained from central banks websites 
+          and global repositories such as FRASER or the Bank of International Settlements (BIS) website.
+          Please visit the Data page ({$Link_to_#_Data}) for more information on downloading speeches.</p>
         <h3>New speeches/Compilation of speeches</h3>
-        <p><br>New speeches are added on a monthly basis. <br>Since there is no all encompassing repository, new speeches are obtained by comparing the new speeches of the BIS repository and the respective central bank websites.<br>After adding all new speeches and removing duplicates, the meta data is extracted by individual strategies depending on the source and <br>speech format. <br><br>For natural language processing (NLP), a pipeline of preprocessing methods is conducted. <br>It includes lemmatization (following the ... method), a transformation to lower case, removing of stoppwords, punctuation and numbers.<br><br>For information extraction, we conduct several measurements:<br><br></p>
+        <p>New speeches are added on a monthly basis. Since there is no all encompassing repository, new 
+          speeches are obtained by comparing the new speeches of the BIS repository and the respective central bank websites.
+          After adding all new speeches and removing duplicates, the meta data is extracted by individual 
+          strategies depending on the source and speech format. For natural language processing (NLP), 
+          a pipeline of preprocessing methods is conducted. It includes lemmatization (following the ... method), 
+          a transformation to lower case, removing of stoppwords, punctuation and numbers.
+          For information extraction, we conduct several measurements:</p>
         <ol start="1" role="list">
           <li>Sentiment indicators are computed based on different dictionaries and weighting methods. Those include Loughran, McDonald (2012) and Blix-Grimaldi (...).</li>
           <li>Textual complexity measures are extracted on the basis of () and (). </li>
-          <li>We conduct several topic models following the classic LDA method (Blei et al 2003). The exact parameter settings can be found here. We don&#x27;t predict topics on new documents, but estimating the whole corpus again.<br><br>Finally, all new speeches are indexed via ElasticSearch and deployed on Kibana.</li>
+          <li>We conduct several topic models following the classic LDA method (Blei et al 2003). 
+            The exact parameter settings can be found here. We don't predict topics on new documents, 
+            but estimating the whole corpus again.Finally, all new speeches are indexed via ElasticSearch 
+            and deployed on Kibana.</li>
         </ol>
-        <p>‍</p>
         <h3>Data</h3>
         <ul role="list">
-          <li>A rich text element can be used with static or dynamic content. For static content, just drop it into any page and begin editing.</li>
+          <li>A rich text element can be used with static or dynamic content. For static content, 
+            just drop it into any page and begin editing.</li>
           <li>Coverage:</li>
           <li> Year Range: 1990 - today ($Link_Date_of_last_Speech)</li>
-          <li>We provide the raw speech in its original format, which can be either html (text) or pdf. The pdf format contains mainly machine readable text. Other cases include <br>pictures of old documents, which is not directly accessible. We recommend optical character recognition by software or simply by using adobe readers text recognition <br>option.</li>
+          <li>We provide the raw speech in its original format, which can be either html (text) or pdf. 
+            The pdf format contains mainly machine readable text. Other cases include pictures of old documents, 
+            which is not directly accessible. We recommend optical character recognition by software or simply 
+            by using adobe readers text recognition option.</li>
         </ul>
         <h3>Limitations and missing data</h3>
         <ul role="list">
           <li> Some swedish speeches (Norwegian) are only available on youtube. Those are not included in the corpus.</li>
-          <li>Some of the speeches are only available in their native language. If no official translation could be found, we<br> translated them via (&quot;google translate&quot; and &quot;&quot;). Automated translation is far from being perfect and limits usuability of those documents regarding certain text mining methods.<br> For a discussion of translation services in the use of social science, see here (Roberts 2015?).</li>
-          <li>No bibliographic search is available yet. We excluded the bibliography for textual analysis, but the raw documents still contain those.</li>
+          <li>Some of the speeches are only available in their native language. If no official translation could be found, we
+             translated them via ("google translate" and ""). Automated translation is far from being perfect 
+             and limits usuability of those documents regarding certain text mining methods. For a discussion of translation 
+             services in the use of social science, see here (Roberts 2015?).</li>
+          <li>No bibliographic search is available yet. We excluded the bibliography for textual analysis, but the raw documents 
+            still contain those.</li>
         </ul>
         <p>‍</p>
       </div>
