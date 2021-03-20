@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Fri Mar 19 2021 11:27:23 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Sat Mar 20 2021 21:11:17 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6022e4e525abed529820814c" data-wf-site="600ec03352cf05a3da53145c">
 <head>
   <meta charset="utf-8">
@@ -30,10 +30,17 @@
       <div class="menu w-clearfix">
         <nav role="navigation" class="navigation-items w-nav-menu">
           <a href="index.html" class="navigation-item w-nav-link">HOME</a>
-          <a href="exploration.html" aria-current="page" class="navigation-item w-nav-link w--current">Exploration</a>
           <a href="data.html" class="navigation-item w-nav-link">Data</a>
           <div class="dropdownwrapper">
-            <a href="contact.html" data-w-id="56b9b94b-85dc-0e24-f7aa-180d7fe317f7" class="navigation-item w-nav-link">ABOUT</a>
+            <a href="exploration.html" data-w-id="56b9b94b-85dc-0e24-f7aa-180d7fe317f7" aria-current="page" class="navigation-item w-nav-link w--current">Exploration</a>
+            <div class="div-content">
+              <a href="raw.html" class="navigation-item w-nav-link">Raw</a>
+              <a href="exploration-copy.html" class="navigation-item w-nav-link">Topic</a>
+              <a href="exploration-copy-2.html" class="navigation-item w-nav-link">Sentiment<br>‍</a>
+            </div>
+          </div>
+          <div class="dropdownwrapper">
+            <a href="contact.html" data-w-id="ae8d9652-215c-4226-fb44-6664fde4d528" class="navigation-item w-nav-link">ABOUT</a>
             <div class="div-content">
               <a href="news.html" class="navigation-item w-nav-link">NEWS</a>
               <a href="documentation.html" class="navigation-item w-nav-link">DOCUMENTATION</a>
@@ -45,36 +52,26 @@
     </div>
   </div>
   <div class="section-4"></div>
-  <div class="exploretabs">
-    <h1>Select your filter</h1>
-    <div>
-      <div data-hover="1" data-delay="0" class="w-dropdown">
-        <div class="w-dropdown-toggle">
-          <div class="w-icon-dropdown-toggle"></div>
-          <div>Methods</div>
-        </div>
-        <nav class="w-dropdown-list">
-          <a href="#" data-w-id="37252eeb-2f8c-5f7d-b718-f49f3c653589" class="w-dropdown-link">Raw speeches</a>
-          <a href="#" data-w-id="37252eeb-2f8c-5f7d-b718-f49f3c65358b" class="w-dropdown-link">Topic Model</a>
-          <a href="#" data-w-id="37252eeb-2f8c-5f7d-b718-f49f3c65358d" class="w-dropdown-link">Sentiment</a>
-        </nav>
-      </div>
-    </div>
-  </div>
+  <div class="exploretabs"></div>
   <div class="rawtabs">
     <div data-duration-in="300" data-duration-out="100" class="tabs tabssentiment w-tabs">
       <div class="tabs-content tabssentiment w-tab-content">
-
+        <div data-w-tab="Tab 2" class="w-tab-pane">
+          <h1 class="heading-12">4<br>‍<br><br>‍</h1>
+        </div>
         <div data-w-tab="Tab 5" class="w-tab-pane">
-          <iframe src="http://35.246.191.18:5601/app/dashboards#/view/c59be570-812a-11eb-9e9f-7dc520b36043?embed=true&_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A0)%2Ctime%3A(from%3A'1990-03-19T07%3A20%3A10.588Z'%2Cto%3Anow))&show-query-input=true&hide-filter-bar=true" height="800" width="100%"></iframe>
+          <h1>2</h1>
         </div>
         <div data-w-tab="Tab 6" class="w-tab-pane w--tab-active">
-          <iframe src="http://35.246.191.18:5601/app/dashboards#/view/d6ba9350-888d-11eb-b9bb-4b613d314abf?embed=true&_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A0)%2Ctime%3A(from%3A'1990-03-19T07%3A20%3A10.588Z'%2Cto%3Anow))&show-query-input=true&hide-filter-bar=true" height="800" width="100%"></iframe>
+          <h1 class="heading11">5<br>‍<br><br>‍</h1>
         </div>
       </div>
       <div class="tabs-menu w-tab-menu">
+        <a data-w-tab="Tab 2" class="tab-link-tab-2 w-inline-block w-tab-link">
+          <div class="text-block-9">Total speeches</div>
+        </a>
         <a data-w-tab="Tab 5" class="tab-link-tab-2 w-inline-block w-tab-link">
-          <div class="text-block-9">Time Series</div>
+          <div class="text-block-9">Central Banks</div>
         </a>
         <a data-w-tab="Tab 6" class="tab-link-tab-2 w-inline-block w-tab-link w--current">
           <div class="text-block-9">Map</div>
@@ -82,27 +79,33 @@
       </div>
     </div>
   </div>
-  <div style="display:none" class="topictabs">
+  <div class="topictabs">
     <div data-duration-in="300" data-duration-out="100" class="tabs w-tabs">
       <div class="tabs-content w-tab-content">
         <div data-w-tab="Tab 2" class="w-tab-pane w--tab-active">
-          <iframe src="http://35.246.191.18:5601/app/dashboards#/view/1dec1f50-812c-11eb-9e9f-7dc520b36043?embed=true&_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A0)%2Ctime%3A(from%3A'1990-03-19T07%3A20%3A10.588Z'%2Cto%3Anow))&show-query-input=true&hide-filter-bar=true" height="800" width="100%"></iframe>
+          <h1 class="heading-12">2</h1>
         </div>
         <div data-w-tab="Tab 4" class="w-tab-pane">
-          <h1>6</h1>
+          <h1>2</h1>
+        </div>
+        <div data-w-tab="Tab 5" class="w-tab-pane">
+          <h1>2</h1>
         </div>
       </div>
       <div class="tabs-menu w-tab-menu">
         <a data-w-tab="Tab 2" class="tab-link-tab-2 w-inline-block w-tab-link w--current">
-          <div class="text-block-9">Topic Proportion</div>
+          <div class="text-block-9">Central Bank</div>
         </a>
         <a data-w-tab="Tab 4" class="tab-link-tab-2 w-inline-block w-tab-link">
-          <div class="text-block-9">Topic Map</div>
+          <div class="text-block-9">Sentiment</div>
+        </a>
+        <a data-w-tab="Tab 5" class="tab-link-tab-2 w-inline-block w-tab-link">
+          <div class="text-block-9">Topics</div>
         </a>
       </div>
     </div>
   </div>
-  <div style="display:none" class="sentimenttabs">
+  <div class="sentimenttabs">
     <div data-duration-in="300" data-duration-out="100" class="tabs w-tabs">
       <div class="tabs-content w-tab-content">
         <div data-w-tab="Tab 2" class="w-tab-pane w--tab-active">
