@@ -12,6 +12,7 @@
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/max_positions.css" rel="stylesheet" type="text/css">
   <link href="css/cbspeeches.webflow.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
   <script type="text/javascript">WebFont.load({  google: {    families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"]  }});</script>
@@ -65,12 +66,15 @@
         <ol start="1" role="list">
           <li>Sentiment indicators are computed based on different dictionaries and weighting methods. Those include Loughran, McDonald (2012) and Blix-Grimaldi (...).</li>
           <li>Textual complexity measures are extracted on the basis of () and (). </li>
-          <li>We conduct several topic models following the classic LDA method (Blei et al 2003). 
-            The exact parameter settings can be found here. We don't predict topics on new documents, 
-            but estimating the whole corpus again.Finally, all new speeches are indexed via ElasticSearch 
-            and deployed on Kibana.</li>
+          <li>We conduct several topic models following the classic LDA method by Blei et al 2003. The exact parameter settings can be found here. We don't predict topics on new documents, 
+            but estimating the whole corpus again. 
+            Methods used:
+            <a href="https://jmlr.org/papers/volume3/blei03a/blei03a.pdf">Blei et al 2003</a></li>
         </ol>
+        Finally, all new speeches are indexed via ElasticSearch and deployed on Kibana.
         <h3>Data</h3>
+        <div class="main-topic">
+        <div class="left-text">
         <ul role="list">
           <li>A rich text element can be used with static or dynamic content. For static content, 
             just drop it into any page and begin editing.</li>
@@ -81,6 +85,12 @@
             which is not directly accessible. We recommend optical character recognition by software or simply 
             by using adobe readers text recognition option.</li>
         </ul>
+        </div>
+        <div class="right-picture">
+          <img src="images/mika-baumeister-Tz1k07Jl2no-unsplash-p-1080.jpeg">
+        </div>
+        <div class="clear"></div>  
+      </div>
         <h3>Limitations and missing data</h3>
         <ul role="list">
           <li> Some swedish speeches (Norwegian) are only available on youtube. Those are not included in the corpus.</li>
