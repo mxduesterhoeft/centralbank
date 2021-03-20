@@ -64,12 +64,17 @@
           a transformation to lower case, removing of stoppwords, punctuation and numbers.
           For information extraction, we conduct several measurements:</p>
         <ol start="1" role="list">
-          <li>Sentiment indicators are computed based on different dictionaries and weighting methods. Those include Loughran, McDonald (2012) and Blix-Grimaldi (...).</li>
-          <li>Textual complexity measures are extracted on the basis of () and (). </li>
-          <li>We conduct several topic models following the classic LDA method by Blei et al 2003. The exact parameter settings can be found here. We don't predict topics on new documents, 
-            but estimating the whole corpus again. 
+          <li>Sentiment indicators are computed based on different dictionaries and weighting methods. Dictionaries used: 
+            <a href="https://sraf.nd.edu/textual-analysis/resources/"> Loughran and McDonald (2011) </a> 
+            <a href="http://archive.riksbank.se/Documents/Rapporter/Working_papers/2012/rap_wp261_120426.pdf"> Apel and Blix-Grimaldi (2012)</a></li>
+          <li>We measure the classical measure of reading grades based on Kincaid (1975). Additionally, we track textual complexity 
+             on the basis of the method proposed in Colliard, J.-E. and C.-P. Georg (2018). 
             Methods used:
-            <a href="https://jmlr.org/papers/volume3/blei03a/blei03a.pdf">Blei et al 2003</a></li>
+            <a href="https://www.newyorkfed.org/medialibrary/media/research/conference/2019/fintech/Georg_Regcomp">Colliard, J.-E. and C.-P. Georg (2018)</a> 
+            <a href="https://apps.dtic.mil/sti/pdfs/ADA006655.pdf">Kincaid (1975)</a></li>
+          <li>We conduct several topic models following the classic LDA method by Blei et al (2003). The exact parameter settings can be found here. We don't predict topics on new documents, 
+            but estimating the whole corpus again. Methods used:
+            <a href="https://jmlr.org/papers/volume3/blei03a/blei03a.pdf">Blei et al (2003)</a></li>
         </ol>
         Finally, all new speeches are indexed via ElasticSearch and deployed on Kibana.
         <h3>Data</h3>
