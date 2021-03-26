@@ -64,9 +64,40 @@
         </div>
      </div>
 
-    <form method="get" action="https://storage.cloud.google.com/shinyspeeches/centralBankSpeeches.csv">
-      <button class = "btn" type="submit">Download CSV</button>
-    </form>
+<!--    <form method="get" action="https://storage.cloud.google.com/shinyspeeches/centralBankSpeeches.csv">-->
+<!--      <button class = "btn" type="submit">Download CSV</button>-->
+<!--    </form>-->
+
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Download Dataset</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="https://storage.cloud.google.com/shinyspeeches/centralBankSpeeches.csv">CSV</a>
+        <a href="https://storage.cloud.google.com/shinyspeeches/speeches.json">JSON</a>
+      </div>
+    </div>
+
+    <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
  <div class="section">
     <div class="container">
       <div class="footer-wrap">
