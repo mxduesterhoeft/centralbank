@@ -1699,7 +1699,7 @@ figcaption {
   display: -ms-flexbox;
   display: flex;
   overflow: visible;
-  width: 100%;
+  width: auto;
   min-width: 0%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1717,6 +1717,8 @@ figcaption {
   -webkit-flex: 0 auto;
   -ms-flex: 0 auto;
   flex: 0 auto;
+  border-radius: 4px;
+  background-color: rgba(41, 41, 41, 0.8);
   opacity: 0;
   -webkit-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
@@ -2418,7 +2420,7 @@ figcaption {
 
 .section-4 {
   min-height: 120px;
-  background-color: #131313;
+  background-color: #1f1f1f;
   color: #181818;
 }
 
