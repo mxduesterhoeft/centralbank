@@ -1,0 +1,21 @@
+.main-topic {
+	margin: 0 auto;
+	clear: both;
+  display: flex;
+}
+
+.left-text{
+	vertical-align:middle;
+}
+
+.right-picture > img{
+	display: block;
+	border-radius: 8px;
+    margin-left: 10px;
+}
+
+.clear{
+	clear: both;
+}
+
+
