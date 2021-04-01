@@ -3178,12 +3178,15 @@ figcaption {
   }
 }
 .btn {
-  background-color: DodgerBlue;
+  background-color: Royalblue;
   border: none;
   color: white;
   padding: 12px 30px;
   cursor: pointer;
   font-size: 20px;
+  width:50%;
+  margin: auto;
+  align-content: center;
 }
 
 /* Darker background on mouse-over */
@@ -3192,32 +3195,36 @@ figcaption {
 }
 
 .dropbtn {
-  background-color: #4CAF50;
+  background-color: Royalblue;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  width:100%;
+  margin: auto;
+  align-content: center;
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #3e8e41;
+  background-color: RoyalBlue;
 }
 
 .dropdown {
-  float: right;
-  position: relative;
   display: inline-block;
+  align-content: center;
+  margin: auto;
+  width: 100%;
 }
 
 .dropdown-content {
+  margin: auto;
   display: none;
-  position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
+  width: 100%;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  right: 0;
   z-index: 1;
 }
 
@@ -3231,3 +3238,7 @@ figcaption {
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
+
+.dropdowndiv{
+  padding:60px;
+}
