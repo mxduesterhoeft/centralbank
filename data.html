@@ -117,9 +117,13 @@ $("#example").DataTable( {
 
 
 function clearTable() {
+
+
+var e = document.getElementById("selectCB");
+var cb = e.value;
   console.log("clear");
     $('#example').dataTable().fnDestroy();
-    cb = "Bank of Austria";
+ //   cb = "Bank of Austria";
     var data = ` {"size":"1000","query": {"query_string": {"query": "${cb}","default_field": "Central_Bank"}}}`
 $.ajax({
   method: "POST",
@@ -216,18 +220,20 @@ $("#example").DataTable( {
   URL: www.centralbankspeeches.com, accessed ... </p>
         </div>
      </div>
-         <div class="dropdown">
+         <div class="dropdown" style="margin:20px;padding:20px">
      
-      <div id="myDropdown" class="dropdown-content">
-        <a href="https://storage.cloud.google.com/shinyspeeches/centralBankSpeeches.csv">CSV</a>
-        <a href="https://storage.cloud.google.com/shinyspeeches/speeches.json">JSON</a>
-      </div>
+      <select id="selectCB">
+  <option value="" selected disabled hidden>Choose Central Bank</option>
+  <option value="ECB">ECB</option>
+ <!-- <option value="Bank of Austria">Bank of Austria</option>-->
+  <option value="Bank of Canada">Bank of Canada</option>
+</select>
+<button onclick = "clearTable()" id="delete">submit central bank</button>
     </div>
 
 	<div class="container">
 			<div class="demo-html">
-      <button onclick = "clearTable()" id="delete">click to delete all rows and insert a new row</button></div>
-     
+      </div>
 			<table id="example" class="display" width="100%"></table>
 		
 			</div>
