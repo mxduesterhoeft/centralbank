@@ -45,9 +45,26 @@
 	<script type="text/javascript" language="javascript" src="resources/demo.js"></script>
 	<script type="text/javascript" language="javascript" class="init">
 
-var data = ' {"size":"1000","query": {"query_string": {"query": "ECB","default_field": "Central_Bank"}}}'
+var cb = "ECB";
+function getFilter(){
+  if ($('#AcknowledgeField').is(':checked')) {
+    cb = "Bank of Austria";
+    $('#example').dataTable()
+    .clear();
+   // .draw();
+    console.log("test1");
+  } else {
+        cb = "ECB";
+    $('#example').dataTable()
+    .clear();
+ //   .draw();
+    console.log("test2");
+  }
+}
+
 
 $(document).ready(function() {
+var data = ` {"size":"1000","query": {"query_string": {"query": "${cb}","default_field": "Central_Bank"}}}`
 $.ajax({
   method: "POST",
   url: "http://35.246.191.18:9200/final/_search?pretty=true",
@@ -58,11 +75,10 @@ $.ajax({
 	var tdata = data.hits.hits;
   console.log(tdata);
 
-  document.getElementById('output').innerHTML = tdata.length
+  
 var dataSet = [
     [ data.hits.hits[0]._source.Central_Bank, data.hits.hits[0]._source.Central_Bank, data.hits.hits[0]._source.Central_Bank, data.hits.hits[0]._source.Central_Bank, data.hits.hits[0]._source.Central_Bank, data.hits.hits[0]._source.Central_Bank ],
 ];
-
 
 $("#example").DataTable( {
 		data: tdata,
@@ -97,10 +113,63 @@ $("#example").DataTable( {
 }).fail(function( data ) {
   console.log(data);
 });
-
-	
 } );
 
+
+function clearTable() {
+  console.log("clear");
+    $('#example').dataTable().fnDestroy();
+    cb = "Bank of Austria";
+    var data = ` {"size":"1000","query": {"query_string": {"query": "${cb}","default_field": "Central_Bank"}}}`
+$.ajax({
+  method: "POST",
+  url: "http://35.246.191.18:9200/final/_search?pretty=true",
+  contentType: "application/json",
+  data: data,
+})
+.done(function( data ) {
+	var tdata = data.hits.hits;
+  console.log(tdata);
+
+  
+var dataSet = [
+    [ data.hits.hits[0]._source.Central_Bank, data.hits.hits[0]._source.Central_Bank, data.hits.hits[0]._source.Central_Bank, data.hits.hits[0]._source.Central_Bank, data.hits.hits[0]._source.Central_Bank, data.hits.hits[0]._source.Central_Bank ],
+];
+
+$("#example").DataTable( {
+		data: tdata,
+		columns: [
+			{ title:  "Central Bank", "data": "._source.Central_Bank"},
+			{ title:  "Date", "data": "._source.date"},
+			{ title:  "Speaker", "data": "._source.Speaker"},
+			{ title: "Place" ,"data": "._source.Place"},
+			{ title: "Text" ,"data": "._source.Text"}
+		],
+		columnDefs: [
+		{
+			"targets": [4],
+			"visible":false
+		}],
+		  dom: 'Bfrtip',
+  		buttons: [{
+                text: 'JSON',
+                action: function ( e, dt, button, config ) {
+                    var data = dt.buttons.exportData();
+ 
+                    $.fn.dataTable.fileSave(
+                        new Blob( [ JSON.stringify( data ) ] ),
+                        'Export.json'
+                    );
+                }
+            },
+            'copy', 'csv', 'excel', 'pdf','print'
+        ],
+		
+	} );
+}).fail(function( data ) {
+  console.log(data);
+});
+};
 
 
 	</script>
@@ -147,15 +216,21 @@ $("#example").DataTable( {
   URL: www.centralbankspeeches.com, accessed ... </p>
         </div>
      </div>
+         <div class="dropdown">
+     
+      <div id="myDropdown" class="dropdown-content">
+        <a href="https://storage.cloud.google.com/shinyspeeches/centralBankSpeeches.csv">CSV</a>
+        <a href="https://storage.cloud.google.com/shinyspeeches/speeches.json">JSON</a>
+      </div>
+    </div>
+
 	<div class="container">
-			<h1>DataTables example <span>Javascript sourced data</span></h1>
-			<div class="demo-html"></div>
+			<div class="demo-html">
+      <button onclick = "clearTable()" id="delete">click to delete all rows and insert a new row</button></div>
+     
 			<table id="example" class="display" width="100%"></table>
-			<p id = 'output'> data: </p>
+		
 			</div>
-
-
-
  <div class="section">
     <div class="container">
       <div class="footer-wrap">
